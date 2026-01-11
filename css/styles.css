@@ -1,0 +1,114 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    background-color: #33333300;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    z-index: 20; /* Specify a stack order in case you're using a different order for other elements */
+    top: 0px;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    color: #0088CC;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    color: #0088CC;
+}
+
+.navbar a img{
+    max-width: 200px;
+}
+
+
+/*hero section*/
+.hero-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -20;
+    object-fit: cover;
+}
+
+.hero {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15%;
+}
+
+.hero-overlay {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    border-image-source:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    border-image-slice: fill 1;
+    z-index: -1;
+}
+
+.hero-heading {
+    color: #ffffff;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    color: #ffffff;
+    text-align: center;
+    max-width: 25% ;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-button {
+    color: #ffffff;
+    background-color: #0088CC;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+}
+
+.video-overlay {
+
+}
+/*end of hero section*/
