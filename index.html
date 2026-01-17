@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Finnish Science Society in the United Kingdom is a membership organisation that was founded in 2017 to provide a network for Finnish Scientists">
     <meta name="keywords" content="Finnish Science Society in the United Kingdom is a membership organisation that was founded in 2017 to provide a network for Finnish Scientists">
+
 	<title>Finnish Science Society in the United Kingom</title>
 	<link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="./img/favicon.png">
@@ -13,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -23,8 +25,8 @@
             <div class="navbar-links">
                 <a class="active" href="#home">HOME</a>
                 <a href="#thesociety">THE SOCIETY</a>
-                <a href="#events">EVENTS</a>
                 <a href="#brexit">BREXIT</a>
+                <a href="#events">EVENTS</a>
                 <a href="#membership">MEMBERSHIP</a>
                 <a href="#committee">COMMITTEE</a>
                 <a href="https://www.facebook.com/FinnishScienceUK">MEMBER'S AREA</a>
@@ -32,10 +34,10 @@
         </div>
 	</header>
 	<main>
-		<div class="hero">
+		<div class="hero" id="home">
             <div class="hero-overlay"></div>
             <div class="video-container">
-                <video class="hero-video" autoplay muted loop id="myVideo">
+                <video class="hero-video" autoplay muted loop>
                     <source src="./img/background.mp4" type="video/mp4">
                 </video>
             </div>
@@ -43,7 +45,7 @@
                 <h1 class="hero-heading">FINNISH SCIENCE SOCIETY IN THE UK</h1>
                 <p class="hero-text">The <b>Finnish Science Society in the UK</b> is an academic society of
                 Finnish scientists, working in the United Kingdom seeking to
-                improve and establish relationships between the united Kingdom
+                improve and establish relationships between the United Kingdom
                 and Finland.</p>
                 <div class="hero-btn-container">
                     <a href="#thesociety">
@@ -52,9 +54,97 @@
                 </div>
             </div>
         </div>
+
+        <div class="society" id="thesociety">
+            <h2>The Society</h2>
+            <p>
+                The Finnish Science Society in the United Kingdom is dedicated to fostering collaboration and networking among Finnish scientists and researchers based in the UK. Our mission is to support academic exchange, organize events, and provide a platform for sharing knowledge and opportunities.
+            </p>
+            <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-top: 40px;">
+                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 320px;">
+                    <h3>Networking</h3>
+                    <p>Connect with fellow Finnish scientists and professionals working in the UK.</p>
+                </div>
+                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 320px;">
+                    <h3>Events</h3>
+                    <p>Participate in seminars, workshops, and social gatherings throughout the year.</p>
+                </div>
+                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 320px;">
+                    <h3>Support</h3>
+                    <p>Access resources and guidance for Finnish researchers and students in the UK.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="brexit" id="brexit">
+            <h2>Brexit, Science, and Finland</h2>
+
+            <p>The United Kingdom's exit from the EU (Brexit) happened on 31 January 2020. 
+                Further negotiations regarding the future relationship between the United Kingdom (UK) and European Union (EU) have now begun.</p>
+
+            <p>Finnish scientists living, working and studying in the UK are an asset to Finland as a nation. 
+                Finnish scientists that have established themselves in the UK have a network of contacts in the country, and can aid in creating new links between Finnish and UK institutions. 
+                Those who leave Finland for their studies or for a research post and then return to Finland bring new knowledge, ideas and connections with them. 
+                Finland should aim to encourage the international behaviour of Finnish scientists and stay in touch with its scientists abroad. 
+                If contact is maintained, Finland can draw on the knowledge and contacts of its scientists and attract more scientific collaboration with other nations.</p>
+
+            <p>Up until now the focus of the Brexit debate has been on what the UK's position is, while the interests of Finland have widely remained undiscussed. 
+                Our review aims to identify and outline what Finnish scientists consider necessary for the future relationship between Finland and the UK to allow for fruitful scientific collaboration. 
+                The contents are based on an open discussion of the Finnish Science Society in the UK on 12 January 2019 and a meeting with the Finnish Ambassador Markku Keinänen on 11 March 2020. 
+                This document covers four main areas:</p>
+
+            <ul>
+                <li>the role of science and research in the negotiations</li>
+                <li>UK participation in EU research framework programmes</li>
+                <li>status of students</li>
+                <li>mobility of researchers</li>
+            </ul>
+
+            <p>These views may be of interest to parties such as the Finnish government and the EU Commission when the details of the future of scientific collaboration between the UK and EU are discussed.</p>
+
+            <a href="./files/brexit_document.pdf" target=“_blank”>
+                <btn type="button" class="brexit-button">Download report</btn>
+            </a>
+        </div>
+
+        <div class="events" id="events">
+            <h2>Upcoming Events</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="membership" id="membership">
+            <h2>Membership</h2>
+            <p>We welcome all members with an active or passing interest in the society and its goals. Prospective members should use this form to submit a membership request. Membership is free.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNuCNp_nUB1DSWn7ynxMEFuKcCTqV0uOFpNghpP6fFW6Qp1Q/viewform?usp=sf_link" target=“_blank”>
+                <btn type="button" class="membership-button">Membership form</btn>
+            </a>
+        </div>
+
+        <div class="committee" id="committe">
+            <h2>The Committee</h2>
+            <div class="committee-container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-img-container">
+                    <img src="./img/im1.jpg">
+                </div>
+                <div class="contact-info-container">
+                    <h2>Contact us</h2>
+                    <p>Please <a href="mailto:finnish.science.uk@gmail.com">write</a> to us directly.</p>
+                </div>
+            </div>
+        </div>
 	</main>
 	<footer>
-		<p></p>
+        <div class="facebook-footer">
+            <p>Connect with us on</p>
+            <a href="https://www.facebook.com/FinnishScienceUK">Facebook</a>
+        </div>
+		<p>FINNISH SCIENCE SOCIETY IN THE UNITED KINGDOM - All Rights Reserved.</p>
 	</footer>
 </body>
 </html>
