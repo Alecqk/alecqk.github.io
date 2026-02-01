@@ -170,7 +170,6 @@ button:hover {
     width: 50vw;
     display: block;
     text-align: center;
-
 }
 
 .brexit a {
@@ -179,3 +178,42 @@ button:hover {
 
 
 /*end of brexit styles*/
+
+/*membership styles*/
+.membership {
+    min-height: 25vh;
+    background: rgb(49, 51, 55);
+    padding: 60px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.membership h2 {
+    color:#ffffff;
+    text-align: center;
+}
+
+.membership p {
+    color:#ffffff;
+    max-width: 50vw;
+    padding-bottom: 4vh;
+}
+
+.membership-button {
+    color: #ffffff;
+    background-color: #0088CC;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+}
+
+.membership a {
+    text-decoration: none;
+}
+/*end of membership styles*/
