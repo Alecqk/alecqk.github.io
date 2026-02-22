@@ -1,6 +1,16 @@
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -9,16 +19,93 @@ button:hover {
 
 /*navbar styles*/
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    background-color: #33333300;
-    overflow: hidden;
+    background-color: transparent;
+    overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 30px;
     z-index: 30;
+    transition: background-color 0.3s ease, padding-top 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(33, 37, 41, 1);
+    padding-top: 0px;
+}
+
+.navbar-toggle-checkbox {
+    display: none;
+}
+
+.navbar-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    gap: 5px;
+}
+
+.navbar-toggle-label span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle-checkbox:checked ~ .navbar-links {
+    display: flex;
+}
+
+.navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+}
+
+.navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle-checkbox:checked ~ .navbar-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-top: 15px;
+    }
+
+    .navbar-toggle-label {
+        display: flex;
+        position: absolute;
+        left: 20px;
+    }
+
+    .navbar-logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgba(33, 37, 41, 0.95);
+        display: none;
+        padding: 20px 0;
+    }
+
+    .navbar-links a {
+        padding: 15px 20px;
+        text-align: left;
+    }
 }
 
 .navbar a {
@@ -38,7 +125,13 @@ button:hover {
 }
 
 .navbar a img {
-    max-width: 200px;
+    max-width: 230px;
+}
+
+@media (max-width: 768px) {
+    .navbar a img {
+        max-width: 150px;
+    }
 }
 /* end of navbar styles*/
 
@@ -83,14 +176,21 @@ button:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 48px;
+    margin-bottom: -10px;
 }
 
 .hero-text {
-    color: #ffffff;
+    color: #d3d3d3;
     text-align: center;
     max-width: 25% ;
     margin-left: auto;
     margin-right: auto;
+    font-size: 18px;
+}
+
+.hero-text b {
+    color: #ffffff;
 }
 
 .hero-btn-container {
@@ -104,10 +204,11 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     border: 0;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 25px;
+    font-size: 16px;
 }
 
 /*end of hero styles*/
@@ -121,6 +222,60 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.society h2 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.society p {
+    color: #ffffff;
+    text-align: center;
+    max-width: 1000px;
+}
+
+.society-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 90vw;
+    max-width: 1000px;
+    padding: 0 20px;
+    margin-top: 40px;
+}
+
+.society-card {
+    text-align: center;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.society-card i {
+    font-size: 24px;
+    color: #ffffff;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.society-card-content {
+    text-align: left;
+}
+
+.society-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.society-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    
+    text-align: left;
 }
 /*end of society styles*/
 
@@ -229,6 +384,10 @@ button:hover {
     justify-content: center;
 }
 
+.events h2 {
+    margin-bottom: 10px;
+}
+
 .accordion {
     margin: auto;
     width: 60vw;
@@ -249,6 +408,7 @@ button:hover {
 .accordion li label {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10px;
     cursor: pointer;
     color: #0088CC;
@@ -271,6 +431,12 @@ input[type="radio"] {
     transition: max-height 0.5s, padding 0.5s;
 }
 
+.accordion .content p {
+    margin: 0;
+    padding: 20px;
+    color: #666666;
+}
+
 .accordion input[type="radio"]:checked + label + .content {
     max-height: 400px;
     padding: 10px 10px 20px;
@@ -280,6 +446,56 @@ input[type="radio"] {
 
 /* committee */
 
+.committee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 100px 0;
+    background: #f7f7f7;
+}
+
+.committee h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.committee-container {
+    text-align: center;
+    padding: 0 40px 20px 40px;
+    max-width: 700px;
+    margin-bottom: 40px;
+    color: #333333;
+}
+
+.committee-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 90vw;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.committee-card {
+    text-align: center;
+}
+
+.committee-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #333333;
+    text-align: left;
+}
+
+.committee-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+    text-align: left;
+}
 /*  end of committee */
 
 /* contact */
@@ -315,11 +531,12 @@ input[type="radio"] {
     text-decoration: none;
 }
 
+.contact-info-container a:hover {
+    text-decoration: underline;
+ }
+
+
 /*  end of contact */
-
-/* facebook */
-
-/* end of facebook */
 
 /* footer */
  .facebook-footer {
@@ -332,6 +549,23 @@ input[type="radio"] {
     justify-content: center;
  }
 
+ .facebook-footer-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+ }
+
+ .facebook-footer-content > i {
+    font-size: 48px;
+    margin-top: 10px;
+ }
+
+ .facebook-footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
 .facebook-footer p {
     margin-bottom: 10px;
  }
@@ -339,6 +573,13 @@ input[type="radio"] {
  .facebook-footer a {
     text-decoration: none;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+ }
+
+ .facebook-footer a i {
+    font-size: 24px;
  }
 
 .facebook-footer a:hover {
@@ -347,11 +588,434 @@ input[type="radio"] {
 
  .rights-footer {
     background-color: #1c2023;
-    color: darkgray;
+    color: #999999;
     height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
  }
+
+ .rights-footer p {
+    font-size: 12px;
+    margin: 0;
+ }
 /* end of footer */
+/* Responsive Design */
+
+/* Tablet (481px - 768px) */
+@media (max-width: 768px) {
+    .hero-heading {
+        font-size: 36px;
+        margin-bottom: -5px;
+    }
+
+    .hero-text {
+        max-width: 60%;
+        font-size: 16px;
+    }
+
+    .society p {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+
+    .society-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .society-card i {
+        font-size: 20px;
+    }
+
+    .society-card h3 {
+        font-size: 16px;
+    }
+
+    .society-card p {
+        font-size: 13px;
+    }
+
+    .brexit p {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+
+    .brexit-list-container {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    .brexit-button {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .membership p {
+        max-width: 90%;
+        padding: 0 20px 4vh 20px;
+    }
+
+    .accordion {
+        width: calc(100% - 40px);
+        max-width: 600px;
+        padding: 0 20px;
+    }
+
+    .accordion li label {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .accordion input[type="radio"]:checked + label + .content {
+        max-height: 500px;
+    }
+
+    .committee-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .committee h2 {
+        font-size: 26px;
+    }
+
+    .committee-container {
+        padding: 0 20px 15px 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-img-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-info-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-info-container h2 {
+        padding: 0;
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .contact-info-container p {
+        padding: 0;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Fix vw-based widths to prevent horizontal overflow */
+    .hero-text {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .society-items,
+    .committee-members,
+    .accordion,
+    .brexit p,
+    .brexit-button,
+    .brexit-list-container,
+    .membership p {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contact-img-container,
+    .contact-info-container {
+        width: 100% !important;
+    }
+
+    .navbar a {
+        padding: 15px 15px;
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 100vh;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .hero-heading {
+        font-size: 28px;
+        margin-bottom: -3px;
+    }
+
+    .hero-text {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    .hero-button {
+        padding: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    .society {
+        padding: 40px 0 40px 0;
+    }
+
+    .society h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .society p {
+        max-width: 95%;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .society-items {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+
+    .society-card {
+        gap: 5px;
+    }
+
+    .society-card i {
+        font-size: 18px;
+        margin-top: 0;
+        margin-left: 25px;
+    }
+
+    .society-card h3 {
+        font-size: 15px;
+        margin-bottom: 8px;
+        margin-left: 15px;
+    }
+
+    .society-card p {
+        font-size: 12px;
+    }
+
+    .brexit {
+        padding: 40px 0 40px 0;
+    }
+
+    .brexit h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .brexit p {
+        max-width: 95%;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .brexit li {
+        font-size: 14px;
+    }
+
+    .brexit-list-container {
+        width: 95%;
+        padding: 0 15px;
+    }
+
+    .brexit-text-container {
+        padding-bottom: 20px;
+    }
+
+    .brexit-button {
+        width: 95%;
+        max-width: none;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .membership {
+        padding: 40px 0 40px 0;
+        min-height: auto;
+    }
+
+    .membership h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .membership p {
+        max-width: 95%;
+        padding: 0 15px 2vh 15px;
+        font-size: 14px;
+    }
+
+    .membership-button {
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .events {
+        padding: 40px 0 40px 0;
+        min-height: auto;
+    }
+
+    .events h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .accordion {
+        width: 95%;
+        max-width: none;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .accordion .content p {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .accordion input[type="radio"]:checked + label + .content {
+        max-height: 600px;
+        padding: 10px;
+    }
+
+    .committee {
+        padding: 40px 0 60px 0;
+    }
+
+    .committee h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #333333;
+    }
+
+    .committee-container {
+        padding: 0 15px 10px 15px;
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .committee-members {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .committee-card {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .committee-card h3 {
+        font-size: 16px;
+    }
+
+    .committee-card p {
+        font-size: 13px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-img-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact-img-container img {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .contact-info-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-info-container h2 {
+        padding: 0;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info-container p {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .facebook-footer {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .facebook-footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .facebook-footer-content > i {
+        font-size: 36px;
+        margin-top: 0;
+    }
+
+    .facebook-footer p {
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .facebook-footer a i {
+        font-size: 18px;
+    }
+
+    .facebook-footer a {
+        font-size: 14px;
+    }
+
+    .rights-footer {
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .rights-footer p {
+        font-size: 11px;
+    }
+}

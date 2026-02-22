@@ -19,6 +19,12 @@
 <body>
 	<header>
 		<div class="navbar">
+            <input type="checkbox" id="navbar-toggle" class="navbar-toggle-checkbox">
+            <label for="navbar-toggle" class="navbar-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <div class="navbar-logo">
                 <a href="#home"><img src="./img/42790_Finnish Science_Logo_RD_02.png" alt="Finnish science logo"></a>
             </div>
@@ -60,18 +66,48 @@
             <p>
                 The Finnish Science Society in the United Kingdom is dedicated to fostering collaboration and networking among Finnish scientists and researchers based in the UK. Our mission is to support academic exchange, organize events, and provide a platform for sharing knowledge and opportunities.
             </p>
-            <div style="display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; margin-top: 40px;">
-                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 320px;">
-                    <h3>Networking</h3>
-                    <p>Connect with fellow Finnish scientists and professionals working in the UK.</p>
+            <div class="society-items">
+                <div class="society-card">
+                    <i class="material-icons">gavel</i>
+                    <div class="society-card-content">
+                        <h3>Advocating</h3>
+                        <p>The society acts to advocate for the interests of researchers to advance and promote scientific collaboration and mobility between Finland and the United Kingdom.</p>
+                    </div>
                 </div>
-                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 320px;">
-                    <h3>Events</h3>
-                    <p>Participate in seminars, workshops, and social gatherings throughout the year.</p>
+                <div class="society-card">
+                    <i class="material-icons">groups</i>
+                    <div class="society-card-content">
+                        <h3>Representation</h3>
+                        <p> The society acts to encourage constructive dialogue on relevant issues with the Finnish and British goverments and their embassies.</p>
+                    </div>
                 </div>
-                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px; max-width: 320px;">
-                    <h3>Support</h3>
-                    <p>Access resources and guidance for Finnish researchers and students in the UK.</p>
+                <div class="society-card">
+                    <i class="material-icons">event</i>
+                    <div class="society-card-content">
+                        <h3>Social</h3>
+                        <p>Outwith the pandemic the society organised social events, typically in London, after an invited talk.</p>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <i class="material-icons">hub</i>
+                    <div class="society-card-content">
+                        <h3>Networking</h3>
+                        <p>The society acts as a point of contact for its membership and acts to facilitate inquires on issues pertaining to research in the UK and Finland.</p>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <i class="material-icons">person</i>
+                    <div class="society-card-content">
+                        <h3>Speaker Series</h3>
+                        <p>We organise on average 3-4 events a year, most of them being talks and discussions at a variety of locations in London, as well as virtually. </p>
+                    </div>
+                </div>
+                <div class="society-card">
+                    <i class="material-icons">public</i>
+                    <div class="society-card-content">
+                        <h3>Brexit</h3>
+                        <p>Click here for our advisory document on how Brexit may impact scientific collaboration and mobility between Finland and the United Kingdom</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -303,7 +339,41 @@
         <div class="committee" id="committe">
             <h2>The Committee</h2>
             <div class="committee-container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>The new Committee was elected in the Annual General Meeting, which was held online on 20 April.</p>
+            </div>
+            <div class="committee-members">
+                <div class="committee-card">
+                    <h3>Committee Member 1</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 2</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 3</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 4</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 5</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 6</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 7</h3>
+                    <p>Position/Role</p>
+                </div>
+                <div class="committee-card">
+                    <h3>Committee Member 8</h3>
+                    <p>Position/Role</p>
+                </div>
             </div>
         </div>
 
@@ -321,13 +391,19 @@
 	</main>
 	<footer>
         <div class="facebook-footer">
-            <p>Connect with us on</p>
-            <a href="https://www.facebook.com/FinnishScienceUK">Facebook</a>
+            <div class="facebook-footer-content">
+                <i class="material-icons">share</i>
+                <div class="facebook-footer-text">
+                    <p>Connect with us on</p>
+                    <a href="https://www.facebook.com/FinnishScienceUK"><i class="material-icons">facebook</i>Facebook</a>
+                </div>
+            </div>
         </div>
         <div class="rights-footer">
            <p>FINNISH SCIENCE SOCIETY IN THE UNITED KINGDOM - All Rights Reserved.</p> 
         </div>
 		
 	</footer>
+	<script src="./js/script.js"></script>
 </body>
 </html>
