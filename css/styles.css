@@ -137,11 +137,17 @@ button:hover {
 
 /*hero styles*/
 
+.video-container {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+}
+
 .hero-video {
     position: absolute;
-    bottom: 0;
+    inset: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -20;
     object-fit: cover;
 }
@@ -150,16 +156,21 @@ button:hover {
     position: relative;
     width: 100%;
     height: 100vh;
-    z-index: -10;
+    z-index: 0;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: clamp(95px, 18vh, 220px);
+    margin-top: 0;
 }
 
 .hero-overlay {
@@ -169,6 +180,7 @@ button:hover {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     z-index: -1;
+    pointer-events: none;
 }
 
 .hero-heading {
@@ -199,16 +211,18 @@ button:hover {
 }
 
 .hero-button {
+    display: inline-block;
     color: #ffffff;
     background-color: #0088CC;
     margin-left: auto;
     margin-right: auto;
     border: 0;
-    padding: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 15px;
+    text-decoration: none;
 }
 
 /*end of hero styles*/
@@ -423,7 +437,9 @@ label::before {
 }
 
 input[type="radio"] {
-    display: none;
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
 }
 
 .accordion .content {
@@ -439,7 +455,7 @@ input[type="radio"] {
 }
 
 .accordion input[type="radio"]:checked + label + .content {
-    max-height: 400px;
+    max-height: 2000px;
     padding: 10px 10px 20px;
 }
 
@@ -673,7 +689,7 @@ input[type="radio"] {
     }
 
     .accordion input[type="radio"]:checked + label + .content {
-        max-height: 500px;
+        max-height: 2000px;
     }
 
     .committee-members {
@@ -767,7 +783,7 @@ input[type="radio"] {
     }
 
     .hero-content {
-        margin-top: clamp(95px, 18vh, 220px);
+        margin-top: 0;
     }
 
     .hero-heading {
@@ -781,10 +797,10 @@ input[type="radio"] {
     }
 
     .hero-button {
-        padding: 12px;
-        padding-left: 20px;
-        padding-right: 20px;
-        font-size: 14px;
+        padding: 10px;
+        padding-left: 18px;
+        padding-right: 18px;
+        font-size: 13px;
     }
 
     .society {
@@ -912,7 +928,7 @@ input[type="radio"] {
     }
 
     .accordion input[type="radio"]:checked + label + .content {
-        max-height: 600px;
+        max-height: 2000px;
         padding: 10px;
     }
 
