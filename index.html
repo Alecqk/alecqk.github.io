@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Finnish Science Society in the United Kingdom is a membership organisation that was founded in 2017 to provide a network for Finnish Scientists">
-    <meta name="keywords" content="Finnish Science Society in the United Kingdom is a membership organisation that was founded in 2017 to provide a network for Finnish Scientists">
+    <meta name="description" content="The Finnish Science Society in the UK is an academic society of Finnish scientists in the United Kingdom, supporting networking, events and academic exchange.">
+    <meta name="robots" content="index,follow">
 
 	<title>Finnish Science Society in the United Kingdom</title>
 	<link rel="stylesheet" href="css/styles.css">
@@ -18,15 +18,15 @@
 </head>
 <body>
 	<header>
-		<div class="navbar">
+		<nav class="navbar" aria-label="Primary">
             <input type="checkbox" id="navbar-toggle" class="navbar-toggle-checkbox">
-            <label for="navbar-toggle" class="navbar-toggle-label">
+            <label for="navbar-toggle" class="navbar-toggle-label" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
             <div class="navbar-logo">
-                <a href="#home"><img src="./img/42790_Finnish Science_Logo_RD_02.png" alt="Finnish science logo"></a>
+                <a href="#home"><img src="./img/42790_Finnish Science_Logo_RD_02.png" alt="Finnish Science Society logo"></a>
             </div>
             <div class="navbar-links">
                 <a class="active" href="#home">HOME</a>
@@ -35,15 +35,15 @@
                 <a href="#events">EVENTS</a>
                 <a href="#membership">MEMBERSHIP</a>
                 <a href="#committee">COMMITTEE</a>
-                <a href="https://www.facebook.com/FinnishScienceUK">MEMBER'S AREA</a>
+                <a href="https://www.facebook.com/FinnishScienceUK" target="_blank" rel="noopener noreferrer">MEMBER'S AREA</a>
             </div>
-        </div>
+		</nav>
 	</header>
 	<main>
 		<div class="hero" id="home">
             <div class="hero-overlay"></div>
             <div class="video-container">
-                <video class="hero-video" autoplay muted loop>
+                <video class="hero-video" autoplay muted loop playsinline>
                     <source src="./img/background.mp4" type="video/mp4">
                 </video>
             </div>
@@ -140,15 +140,15 @@
 
                 <p>These views may be of interest to parties such as the Finnish government and the EU Commission when the details of the future of scientific collaboration between the UK and EU are discussed.</p>
             </div>
-            <a href="./files/brexit_document.pdf" target="_blank" class="brexit-button">Download report</a>
+            <a href="./files/brexit_document.pdf" target="_blank" rel="noopener noreferrer" class="brexit-button">Download report</a>
         </div>
 
         <div class="events" id="events">
             <h2>Upcoming Events</h2>
 
-            <ul class="accordion">
+			<ul class="accordion" aria-label="Upcoming events">
                 <li>
-                    <input type="radio" name="accordion" id="StudyAndResearch" checked>
+					<input type="radio" name="accordion-upcoming" id="StudyAndResearch" checked>
                     <label for="StudyAndResearch">Opiskelemaan tai tutkijaksi Britanniaan - Study and Research in the UK</label>
                     <div class="content">
                         <p>
@@ -159,13 +159,15 @@
                             The participants are encouraged to send questions in advance. There is also an opportunity to ask questions during the Q&A; session. 
                             The event covers undergraduate and postgraduate studies as well as postdoctoral research. 
                             Organisers: Finnish Science Society in the UK; British Council; British Embassy, Helsinki; Finnish Embassy, London; Finnish Student Society of Great Britain (ISO ry); Imperial College London. 
-                            <a href="https://www.eventbrite.co.uk/e/opiskelemaan-tai-tutkijaksi-britanniaan-study-and-research-in-the-uk-registration-637481413067?aff=oddtdtcreator">Link here</a>
+                            <a href="https://www.eventbrite.co.uk/e/opiskelemaan-tai-tutkijaksi-britanniaan-study-and-research-in-the-uk-registration-637481413067?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">Link here</a>
                         </p>
                     </div>
                 </li>
+            </ul>
 
-                <h2>Past Events</h2>
-                <p>Some of our past events...</p>
+            <h2>Past Events</h2>
+            <p>Some of our past events...</p>
+            <ul class="accordion" aria-label="Past events">
                 <li>
                     <input type="radio" name="accordion" id="EUResearch">
                     <label for="EUResearch">EU Research in London</label>
@@ -326,9 +328,7 @@
         <div class="membership" id="membership">
             <h2>Membership</h2>
             <p>We welcome all members with an active or passing interest in the society and its goals. Prospective members should use this form to submit a membership request. Membership is free.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNuCNp_nUB1DSWn7ynxMEFuKcCTqV0uOFpNghpP6fFW6Qp1Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
-                <btn type="button" class="membership-button">Membership form</btn>
-            </a>
+            <a class="membership-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfNuCNp_nUB1DSWn7ynxMEFuKcCTqV0uOFpNghpP6fFW6Qp1Q/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">Membership form</a>
         </div>
 
         <div class="committee" id="committee">
@@ -379,7 +379,7 @@
         <div class="contact" id="contact">
             <div class="contact-container">
                 <div class="contact-img-container">
-                    <img src="./img/im1.jpg" alt="">
+                    <img src="./img/im1.jpg" alt="Contact" loading="lazy">
                 </div>
                 <div class="contact-info-container">
                     <h2>Contact us</h2>
@@ -394,8 +394,8 @@
                 <i class="material-icons">share</i>
                 <div class="facebook-footer-text">
                     <p>Connect with us on</p>
-                    <a href="https://www.facebook.com/FinnishScienceUK">Facebook</a>
-                    <a href="https://www.linkedin.com/company/finnish-science-uk/">LinkedIn</a>
+                    <a href="https://www.facebook.com/FinnishScienceUK" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://www.linkedin.com/company/finnish-science-uk/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
         </div>
