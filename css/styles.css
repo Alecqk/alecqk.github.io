@@ -225,6 +225,30 @@ button:hover {
     text-decoration: none;
 }
 
+/* Mobile landscape adjustments */
+@media (orientation: landscape) and (max-height: 625px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 20px 40px;
+    }
+
+    .hero-heading {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .hero-button {
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
 /*end of hero styles*/
 
 /*society styles*/
@@ -1049,5 +1073,44 @@ input[type="radio"] {
 
     .rights-footer p {
         font-size: 11px;
+    }
+}
+
+/* Mobile landscape adjustments for footer */
+@media (orientation: landscape) and (max-height: 625px) {
+    .facebook-footer {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .facebook-footer-content {
+        gap: 10px;
+    }
+
+    .facebook-footer-content > i {
+        font-size: 28px;
+        margin-top: 0;
+    }
+
+    .facebook-footer p {
+        margin-bottom: 2px;
+        font-size: 12px;
+    }
+
+    .facebook-footer a {
+        font-size: 12px;
+    }
+
+    .facebook-footer a i {
+        font-size: 16px;
+    }
+
+    .rights-footer {
+        height: auto;
+        padding: 8px 10px;
+    }
+
+    .rights-footer p {
+        font-size: 10px;
     }
 }
